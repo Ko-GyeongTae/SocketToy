@@ -1,6 +1,7 @@
 const Koa = require('koa');
 const Logger = require('koa-logger');
 const Socket = require('socket.io');
+const { addUser } = require('./api/users');
 const router = require('./router');
 
 const app = new Koa();
@@ -23,6 +24,6 @@ io.on("connection", (Socket) => {
         console.log(name, room);
         console.log(socket.id, "socketid");
 
-        const { error, user } = add
+        const { error, user } = addUser();
     });
 });
