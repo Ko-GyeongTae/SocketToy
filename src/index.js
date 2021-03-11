@@ -24,5 +24,5 @@ io.on("connection", (Socket) => {
         console.log(socket.id, "socketid");
 
         const { error, user } = add
-    })
-})
+    });
+});
